@@ -6,7 +6,7 @@
 
 Name:    cinnamon-desktop
 Version: 5.2.0
-Release: 1
+Release: 2
 Summary: Shared code among cinnamon-session, nemo, etc
 License: GPLv2+ and LGPLv2+ and MIT
 URL:     https://github.com/linuxmint/%{name}
@@ -28,7 +28,7 @@ BuildRequires: meson
 BuildRequires: intltool
 BuildRequires: itstool
 
-Requires: redhat-menus
+Requires: openEuler-menus
 Requires: system-backgrounds-gnome
 Requires: gnome-themes-standard
 
@@ -82,5 +82,8 @@ install -m 644 %SOURCE1 %buildroot%{_datadir}/applications/x-cinnamon-mimeapps.l
 %{_datadir}/gir-1.0/C*.gir
 
 %changelog
+* Fri May 13 2022 lin zhang <lin.zhang@turbolinux.com.cn> - 5.2.0-2
+- Replace redhat-menus to openEuler-menus for Requires
+
 * Fri May 6 2022 lin zhang <lin.zhang@turbolinux.com.cn> - 5.2.0-1
 - Initial Packaging
